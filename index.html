@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Photo Vault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">▣</span>
+      My Photo Vault
+    </a>
+    <span class="secure-label">🔒 Private gallery</span>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <p class="eyebrow">YOUR PERSONAL SPACE</p>
+      <h1>Your memories,<br>all in one place.</h1>
+      <p class="subtitle">
+        Keep your favorite photos safe and accessible anywhere.
+      </p>
+    </section>
+
+   
+<section class="upload-card" id="auth-section">
+  <h2>Welcome to your Photo Vault</h2>
+  <p>Sign in or create your private account.</p>
+
+  <form id="auth-form">
+    <input
+      id="email"
+      type="email"
+      placeholder="Your email"
+      required
+    >
+
+    <input
+      id="password"
+      type="password"
+      placeholder="Password (at least 8 characters)"
+      minlength="8"
+      required
+    >
+
+    <button class="upload-button" type="submit" id="login-btn">
+      Sign in
+    </button>
+
+    <button class="upload-button" type="button" id="signup-btn">
+      Create account
+    </button>
+  </form>
+
+  <p id="auth-message" role="status"></p>
+  <button type="button" id="logout-btn" hidden>Sign out</button>
+</section>
+
+
+      <label class="upload-button" for="photo-input">
+        Choose photos
+      </label>
+      <input
+        id="photo-input"
+        type="file"
+        accept="image/*"
+        multiple
+      >
+      <p class="small-note">Your photos will be stored online after setup.</p>
+    </section>
+
+    <section class="gallery-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h2>My Gallery</h2>
+        </div>
+        <span id="photo-count">0 photos</span>
+      </div>
+
+      <div id="gallery" class="gallery">
+        <div class="empty-state">
+          <div class="empty-icon">▧</div>
+          <h3>Your gallery is waiting</h3>
+          <p>Your uploaded photos will appear here.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>My Photo Vault · Your memories matter.</p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
